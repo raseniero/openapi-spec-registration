@@ -1,6 +1,6 @@
-# OpenAPI Spec Playwright
+# OpenAPI Spec Registration
 
-A comprehensive testing framework that combines Playwright for browser automation with custom utilities for API testing against OpenAPI specifications.
+A comprehensive testing framework that combines Playwright for browser automation with custom utilities for API testing against OpenAPI specifications, specifically designed for testing a **Class Registration System**.
 
 ## 🎯 Project Overview
 
@@ -10,21 +10,47 @@ This project provides a robust foundation for testing both web applications and 
 - **Type-safe** response validation
 - **Built-in debugging** with cURL command generation
 - **OpenAPI specification** integration ready
+- **Class Registration System** testing focus
 
 ## 📁 Project Structure
 
 ```
-openapi-spec-playwright/
+openapi-spec-registration/
 ├── tests/                    # Test files
 │   └── demo-todo-app.spec.ts # Example TodoMVC test suite
+├── tests-examples/           # Example test files
+│   └── demo-todo-app.spec.ts # TodoMVC example test suite
 ├── api-docs/                 # OpenAPI documentation
+│   └── openapi.yaml         # Class registration API spec
 ├── ai-docs/                  # AI-generated documentation
+│   ├── user-story.md        # User stories for registration form
+│   ├── user-flow.md         # User flow documentation
+│   └── prd-registration-form.md # Product requirements
 ├── playwright.config.ts      # Playwright configuration
 ├── package.json             # Dependencies and scripts
 ├── curlHelper.ts            # API debugging utilities
 ├── responseAsserts.ts       # Type-safe response validation
 └── wrapper.ts               # Request wrapper with logging
 ```
+
+## 🎯 Business Domain
+
+### Class Registration System
+The project is specifically designed for testing a **digital class registration system** with comprehensive user stories and API specifications.
+
+#### Key User Stories:
+- **Successful Registration**: Complete form submission with email confirmation
+- **Form Validation**: Email format, required fields, email matching
+- **Schedule Selection**: Dropdown with available time slots
+- **Duplicate Prevention**: Prevent multiple registrations with same email
+- **Responsive Design**: Mobile-friendly interface
+
+#### API Endpoints:
+- **POST /registration**: Submit class registration
+- **Validation endpoints**: Form field validation
+- **Schedule endpoints**: Available time slots
+- **Error handling**: 400, 409, 500 status codes
+- **Email notifications**: Confirmation and admin notifications
 
 ## 🚀 Getting Started
 
@@ -260,6 +286,38 @@ The `sendRequest` wrapper automatically logs:
 - cURL commands for reproduction
 - Request/response data
 - Error details with status codes
+
+## 🎯 Key Features
+
+### 1. API Testing Capabilities
+- **cURL command generation** for debugging
+- **Type-safe response validation**
+- **Automatic request/response logging**
+- **Error handling with detailed information**
+
+### 2. UI Testing Capabilities
+- **Multi-browser support** (Chrome, Firefox, Safari)
+- **Page Object Model** implementation
+- **Local storage validation**
+- **Responsive design testing**
+
+### 3. Development Experience
+- **TypeScript support** throughout
+- **Comprehensive documentation**
+- **Example test suites**
+- **Debugging utilities**
+
+## 📦 Dependencies & Technology Stack
+
+### Core Dependencies:
+- **`@playwright/test`**: Browser automation and UI testing
+- **`axios`**: HTTP client for API testing
+- **`@types/node`**: TypeScript definitions for Node.js
+
+### Testing Framework:
+- **Playwright**: Modern browser automation
+- **TypeScript**: Type-safe development
+- **Custom utilities**: API testing helpers
 
 ## 🤝 Contributing
 
