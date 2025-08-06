@@ -5,6 +5,7 @@ A comprehensive testing framework that combines Playwright for browser automatio
 ## 🎯 Project Overview
 
 This project provides a robust foundation for testing both web applications and APIs with:
+
 - **Playwright** for browser automation and UI testing
 - **Custom utilities** for API testing and debugging
 - **Type-safe** response validation
@@ -14,7 +15,7 @@ This project provides a robust foundation for testing both web applications and 
 
 ## 📁 Project Structure
 
-```
+```bash
 openapi-spec-registration/
 ├── tests/                    # Test files
 │   └── demo-todo-app.spec.ts # Example TodoMVC test suite
@@ -36,16 +37,19 @@ openapi-spec-registration/
 ## 🎯 Business Domain
 
 ### Class Registration System
+
 The project is specifically designed for testing a **digital class registration system** with comprehensive user stories and API specifications.
 
-#### Key User Stories:
+#### Key User Stories
+
 - **Successful Registration**: Complete form submission with email confirmation
 - **Form Validation**: Email format, required fields, email matching
 - **Schedule Selection**: Dropdown with available time slots
 - **Duplicate Prevention**: Prevent multiple registrations with same email
 - **Responsive Design**: Mobile-friendly interface
 
-#### API Endpoints:
+#### API Endpoints
+
 - **POST /registration**: Submit class registration
 - **Validation endpoints**: Form field validation
 - **Schedule endpoints**: Available time slots
@@ -94,6 +98,7 @@ npx playwright test --debug
 ### 1. API Testing Utilities
 
 #### `curlHelper.ts`
+
 Converts Axios requests to cURL commands for debugging:
 
 ```typescript
@@ -112,6 +117,7 @@ console.log(curl.generateCommand());
 ```
 
 #### `responseAsserts.ts`
+
 Type-safe assertion utilities for API responses:
 
 ```typescript
@@ -129,6 +135,7 @@ try {
 ```
 
 #### `wrapper.ts`
+
 Request wrapper with automatic logging:
 
 ```typescript
@@ -142,6 +149,7 @@ const response = await sendRequest(axios.get, '/api/users');
 ### 2. Playwright Configuration
 
 The project is configured for:
+
 - **Multi-browser testing** (Chrome, Firefox, Safari)
 - **Parallel test execution**
 - **HTML reporting**
@@ -151,6 +159,7 @@ The project is configured for:
 ### 3. Example Test Suite
 
 The `demo-todo-app.spec.ts` demonstrates:
+
 - **Page Object patterns**
 - **Helper functions** for common operations
 - **Local storage validation**
@@ -201,6 +210,7 @@ npm run install-browsers
 ### Playwright Configuration
 
 The `playwright.config.ts` includes:
+
 - Test directory: `./tests`
 - Parallel execution enabled
 - HTML reporter
@@ -283,6 +293,7 @@ npx playwright test demo-todo-app.spec.ts --debug
 ### API Request Debugging
 
 The `sendRequest` wrapper automatically logs:
+
 - cURL commands for reproduction
 - Request/response data
 - Error details with status codes
@@ -290,18 +301,21 @@ The `sendRequest` wrapper automatically logs:
 ## 🎯 Key Features
 
 ### 1. API Testing Capabilities
+
 - **cURL command generation** for debugging
 - **Type-safe response validation**
 - **Automatic request/response logging**
 - **Error handling with detailed information**
 
 ### 2. UI Testing Capabilities
+
 - **Multi-browser support** (Chrome, Firefox, Safari)
 - **Page Object Model** implementation
 - **Local storage validation**
 - **Responsive design testing**
 
 ### 3. Development Experience
+
 - **TypeScript support** throughout
 - **Comprehensive documentation**
 - **Example test suites**
@@ -309,12 +323,14 @@ The `sendRequest` wrapper automatically logs:
 
 ## 📦 Dependencies & Technology Stack
 
-### Core Dependencies:
+### Core Dependencies
+
 - **`@playwright/test`**: Browser automation and UI testing
 - **`axios`**: HTTP client for API testing
 - **`@types/node`**: TypeScript definitions for Node.js
 
-### Testing Framework:
+### Testing Framework
+
 - **Playwright**: Modern browser automation
 - **TypeScript**: Type-safe development
 - **Custom utilities**: API testing helpers
@@ -334,10 +350,11 @@ This project is licensed under the ISC License.
 ## 🆘 Support
 
 For issues and questions:
+
 - Create an issue on GitHub
 - Check the Playwright documentation
 - Review the example test suite
 
 ---
 
-**Built with ❤️ using Playwright and TypeScript**
+Built with ❤️ using Playwright and TypeScript
