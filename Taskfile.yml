@@ -24,3 +24,23 @@ tasks:
     desc: Install Playwright browsers
     cmds:
       - npm run install-browsers
+  mock:start:
+    desc: Start Prism mock server with OpenAPI spec
+    cmds:
+      - npm run mock:start
+  mock:start:dynamic:
+    desc: Start Prism mock server with dynamic responses
+    cmds:
+      - npm run mock:start:dynamic
+  mock:start:port:
+    desc: Start Prism mock server on port 3001
+    cmds:
+      - npm run mock:start:port
+  mock:start:verbose:
+    desc: Start Prism mock server with verbose logging
+    cmds:
+      - npm run mock:start:verbose
+  mock:validate:
+    desc: Validate OpenAPI specification
+    cmds:
+      - npm run mock:validate

@@ -8,7 +8,12 @@
     "test:debug": "playwright test --debug",
     "test:ui": "playwright test --ui",
     "report": "playwright show-report",
-    "install-browsers": "playwright install"
+    "install-browsers": "playwright install",
+    "mock:start": "prism mock api-docs/openapi.yaml",
+    "mock:start:dynamic": "prism mock api-docs/openapi.yaml --dynamic",
+    "mock:start:port": "prism mock api-docs/openapi.yaml --port 3001",
+    "mock:start:verbose": "prism mock api-docs/openapi.yaml --verbose",
+    "mock:validate": "prism validate api-docs/openapi.yaml"
   },
   "keywords": [],
   "author": "",
@@ -16,7 +21,8 @@
   "description": "",
   "devDependencies": {
     "@playwright/test": "^1.53.1",
-    "@types/node": "^24.0.3"
+    "@types/node": "^24.0.3",
+    "@stoplight/prism-cli": "^5.9.0"
   },
   "dependencies": {
     "axios": "^1.10.0"
